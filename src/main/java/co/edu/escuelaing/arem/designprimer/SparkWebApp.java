@@ -11,7 +11,7 @@ public class SparkWebApp {
 		port(getPort());
 		get("/",(req,resp)->pageIndex(req,resp));
 		get("/calculo",(req,resp)->Calculo(req,resp));
-		post("/results",(req,resp)->answer(req, resp));
+		get("/results",(req,resp)->answer(req, resp));
 		
 	}
 	
