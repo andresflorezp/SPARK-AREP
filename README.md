@@ -29,13 +29,13 @@ git clone https://github.com/andresflorezp/SPARK-AREP.git
 
 ## Construido con
 
-* [Maven] (https://maven.apache.org/) - Gestión de dependencias
+* [Maven](https://maven.apache.org/) - Gestión de dependencias
 * [Spark](http://sparkjava.com)-Framework
 
 
 ## Autores
 
-* **Andres Giovanne Florez Perez** - **Tarea 2 Arep** - [andresflorezp] (https://github.com/andresflorezp)
+* **Andres Giovanne Florez Perez** - **Tarea 2 Arep** - [andresflorezp](https://github.com/andresflorezp)
 <!--
 Consulte también la lista de [colaboradores] (https://github.com/your/project/contributors) que participaron en este proyecto.-->
 
