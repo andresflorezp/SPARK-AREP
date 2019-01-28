@@ -10,7 +10,7 @@ public class SparkWebApp {
 		// TODO Auto-generated method stub
 		port(getPort());
 		get("/",(req,resp)->pageIndex(req,resp));
-		post("/calculo",(req,resp)->Calculo(req,resp));
+		get("/calculo",(req,resp)->Calculo(req,resp));
 		get("/results",(req,resp)->answer(req, resp));
 		
 	}
