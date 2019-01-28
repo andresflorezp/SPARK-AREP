@@ -11,7 +11,7 @@ public class SparkWebApp {
 		port(getPort());
 		get("/",(req,resp)->pageIndex(req,resp));
 		get("/calculo",(req,resp)->Calculo(req,resp));
-		get("/results",(req,resp)->answer(req, resp));
+		post("/results",(req,resp)->answer(req, resp));
 		
 	}
 	
@@ -98,8 +98,8 @@ public class SparkWebApp {
 		
 		String tabla="";
 		for(int i=0;i<Math.max(particion1.length, particion2.length);i++) {
-			if(i==particion1.length)tabla+=genTable("-", particion2[i]);
-			else if(i==particion2.length)tabla+=genTable(particion1[i],"-");
+			if(i>=particion1.length)tabla+=genTable("-", particion2[i]);
+			else if(i>=particion2.length)tabla+=genTable(particion1[i],"-");
 			else tabla+=genTable(particion1[i],particion2[i]);
 			
 		}
