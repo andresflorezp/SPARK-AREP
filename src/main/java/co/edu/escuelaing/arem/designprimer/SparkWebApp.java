@@ -4,6 +4,10 @@ import static spark.Spark.*;
 import spark.Request;
 import spark.Response;
 import java.util.*;
+/**
+ * @author Andres
+ * Esta clase permite crear la aplicacion con spark
+ */
 public class SparkWebApp {
 
 	public static void main(String[] args) {
@@ -15,6 +19,7 @@ public class SparkWebApp {
 		
 	}
 	
+
 	public static String pageIndex(Request req,Response resp){
 		String respuesta="<!doctype html>\n" +
 				"<html lang=\"en\">\n" +
@@ -65,6 +70,7 @@ public class SparkWebApp {
 				"</html>";
 		return respuesta;
 	}
+
 	public static String answer(Request req,Response resp){
 		String set1 = req.queryParams("DataOne");
 		String set2 = req.queryParams("DataTwo");
@@ -139,6 +145,7 @@ public class SparkWebApp {
 				"</html>";
 		return respuesta;
 	}
+
 	static String genTable(String num1,String num2) {
 		return 	"<tr>\n" +
 				"<th>"+num1+"</th>\n" +
@@ -146,6 +153,11 @@ public class SparkWebApp {
 				"</tr>\n";
 		
 	}
+	/**
+	 * Este metodo permite tener el puerto por defecto de heroku o asignarle uno
+	 * 
+	 * @return
+	 */
 	static int getPort() {
 		if (System.getenv("PORT") != null) {
 			return Integer.parseInt(System.getenv("PORT"));
